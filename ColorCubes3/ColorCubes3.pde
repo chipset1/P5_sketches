@@ -71,7 +71,6 @@ void draw()
 }
 
 color palette(float t,  PVector dc_offset,  PVector amp,  PVector freq,  PVector phase){
-  // color gidiant cosine platte
   float[] a = dc_offset.array();
   float[] b = amp.array();
   float[] c = freq.array();
