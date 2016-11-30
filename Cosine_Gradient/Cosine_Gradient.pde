@@ -1,6 +1,7 @@
 void setup() {
   size(700, 500);
   noLoop();
+  size(500, 460);
   colorMode(RGB, 1.0);
 }
 
@@ -55,32 +56,32 @@ void draw() {
   // from/made with http://dev.thi.ng/gradients/
 
   //blue cyan pink
-  gradiantRow(320,
+  gradiantRow(300,
               new PVector(1.848, 0.788, 1.298),
               new PVector(-1.922, 0.500, 0.500),
               new PVector(-0.372, 1.000, 1.000),
               new PVector(0.068, -0.352, 0.945));
 
   //yellow-green-blue
-  gradiantRow(360,
+  gradiantRow(340,
               new PVector(0.650,0.500,0.310),
               new PVector(-0.650,0.500,0.600),
               new PVector(0.333,0.278,0.278),
               new PVector(0.660,0.000,0.667));
   // yellow purple magenta
-  gradiantRow(400,
+  gradiantRow(380,
               new PVector(0.731, 1.098, 0.192),
               new PVector(0.358, 1.090, 0.657),
               new PVector(1.077, 0.360, 0.328),
               new PVector(0.965, 2.265, 0.837));
 
   //yellow magenta cyan
-  gradiantRow(440,
+  gradiantRow(420,
               new PVector(1.000, 0.500, 0.500),
               new PVector(0.500, 0.500, 0.500),
               new PVector(0.750, 1.000, 0.667),
               new PVector(0.800, 1.000, 0.333));
-
+  saveFrame();
 }
 
 void gradiantRow(int y, PVector a, PVector b, PVector c, PVector d){
@@ -93,7 +94,7 @@ void gradiantRow(int y, PVector a, PVector b, PVector c, PVector d){
 
 color palette(float t,  PVector dc_offset,  PVector amp,  PVector freq,  PVector phase){
   // based on http://www.iquilezles.org/www/articles/palettes/palettes.htm
-  // see http://dev.thi.ng/gradients/ for
+  // also see http://dev.thi.ng/gradients/ for more examples and to use an interactive cosine gradient generator editor
   float[] a = dc_offset.array();
   float[] b = amp.array();
   float[] c = freq.array();
